@@ -24,14 +24,12 @@ Ce projet me permet de découvrir et de pratiquer :
    cd PlayFinder
 
 2. Installez les dépendances:
-
-```bash
-npm install
+  ```bash
+  npm install
 
 3. Lancez l'application :
-
-```bash
-npm run serve
+  ```bash
+  npm run serve
 
 📜 Licence
 Ce projet est sous licence MIT.
