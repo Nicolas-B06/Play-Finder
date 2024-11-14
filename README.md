@@ -21,15 +21,15 @@ Ce projet me permet de découvrir et de pratiquer :
 1. Clonez le dépôt :
    ```bash
    git clone https://github.com/USERNAME/PlayFinder.git
-   cd PlayFinder
+   cd PlayFinder ```
 
 2. Installez les dépendances:
   ```bash
-  npm install
+  npm install ```
 
 3. Lancez l'application :
   ```bash
-  npm run serve
+  npm run serve ```
 
 📜 Licence
 Ce projet est sous licence MIT.
