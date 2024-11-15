@@ -1,18 +1,18 @@
 <template>
-  <div class="mx-auto h-screen bg-gray-100 p-6 flex flex-col items-center">
-    <h1 class="text-4xl font-bold text-blue-600 mb-6 text-center">
-      PlayFinder
+  <div class="mx-auto h-screen bg-primary p-8 flex flex-col items-center">
+    <h1 class="text-4xl font-bold text-secondary mb-24 text-center">
+      Play<span class="text-accent">Finder</span>
     </h1>
-    <div class="flex flex-row items-start space-x-8">
-      <div class="w-1/2">
+
+    <div class="flex flex-row items-start space-x-8 w-full max-w-4xl justify-center">
+      <div class="w-1/2 max-w-md border border-secondary rounded-lg shadow-md p-4 bg-highlight">
         <GameList :initialGames="games" @update-games="updateGames" />
       </div>
 
-      <!-- Rouleau -->
-      <div class="flex flex-col items-center w-1/2">
+      <div class="flex flex-col items-center w-1/2 max-w-md">
         <div
           ref="roller"
-          class="relative w-64 h-16 overflow-hidden border-4 border-blue-500 rounded-lg"
+          class="relative w-64 h-16 overflow-hidden border-4 border-secondary rounded-lg shadow-md bg-highlight"
         >
           <div
             class="flex flex-col items-center transition-transform duration-100 ease-linear"
@@ -26,7 +26,7 @@
             <div
               v-for="(game, index) in repeatedGames"
               :key="index"
-              class="text-lg font-semibold text-gray-700 h-16 flex items-center justify-center"
+              class="text-lg font-semibold text-secondary h-16 flex items-center justify-center"
             >
               {{ game }}
             </div>
@@ -34,17 +34,18 @@
         </div>
         <button
           @click="startRoll"
-          class="mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-700 transition duration-300"
+          class="mt-4 px-6 py-2 bg-accent text-secondary font-semibold rounded-lg shadow hover:bg-green-400 transition duration-300"
         >
           Lancer
         </button>
-        <p v-if="selectedGame" class="mt-4 text-lg text-gray-700">
-          🎲 Jeu sélectionné : <span class="font-bold">{{ selectedGame }}</span>
+        <p v-if="selectedGame" class="mt-4 text-lg text-secondary">
+          🎲 Jeu sélectionné : <span class="font-bold text-accent">{{ selectedGame }}</span>
         </p>
       </div>
     </div>
   </div>
 </template>
+
 
 <script>
 import GameList from '../components/GameList.vue';
@@ -172,4 +173,17 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.bg-lightSkyBlue {
+  background-color: #e0f7fa;
+}
+.text-darkBlue {
+  color: #00796b;
+}
+.border-darkBlue {
+  border-color: #00796b;
+}
+.bg-brightYellow {
+  background-color: #ffeb3b;
+}
+</style>
