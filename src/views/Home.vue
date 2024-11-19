@@ -43,6 +43,7 @@
         </p>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -54,75 +55,7 @@ export default {
   name: 'HomePage',
   data() {
     return {
-      games: [
-        'The Witcher 3',
-        'Cyberpunk 2077',
-        'Minecraft',
-        'Among Us',
-        'Rocket League',
-        'Valorant',
-        'League of Legends',
-        'Fortnite',
-        'Apex Legends',
-        'Call of Duty',
-        'FIFA 21',
-        'GTA V',
-        'Red Dead Redemption 2',
-        "Assassin's Creed Valhalla",
-        'Overwatch',
-        'Rainbow Six Siege',
-        'World of Warcraft',
-        'Dota 2',
-        'Counter-Strike: Global Offensive',
-        'PUBG',
-        'Hearthstone',
-        'Minecraft Dungeons',
-        'Diablo III',
-        'Starcraft II',
-        'Heroes of the Storm',
-        'World of Tanks',
-        'Warframe',
-        'Destiny 2',
-        'The Elder Scrolls Online',
-        'Final Fantasy XIV',
-        'Guild Wars 2',
-        'Black Desert Online',
-        'Path of Exile',
-        'Runescape',
-        'Eve Online',
-        'Tera',
-        'Neverwinter',
-        'Star Wars: The Old Republic',
-        'Aion',
-        'Blade & Soul',
-        'ArcheAge',
-        'Rift',
-        'Wildstar',
-        'Lineage II',
-        'MapleStory',
-        'Albion Online',
-        'The Lord of the Rings Online',
-        'DC Universe Online',
-        'Star Trek Online',
-        'Elder Scrolls: Legends',
-        'Gwent',
-        'Magic: The Gathering Arena',
-        'Legends of Runeterra',
-        'Hearthstone Battlegrounds',
-        'Auto Chess',
-        'Teamfight Tactics',
-        'Dota Underlords',
-        'Legends of Runeterra',
-        'Artifact',
-        'Gwent',
-        'Magic: The Gathering Arena',
-        'Hearthstone Battlegrounds',
-        'Auto Chess',
-        'Teamfight Tactics',
-        'Dota Underlords',
-        'Legends of Runeterra',
-        'Artifact',
-      ],
+      games: [],
       selectedGame: null,
       position: 0,
       isRolling: false,
@@ -164,7 +97,7 @@ export default {
       }, 4000);
     },
     updateGames(updatedGames) {
-      this.games = updatedGames;
+      this.games = [...updatedGames];
     },
   },
   components: {
