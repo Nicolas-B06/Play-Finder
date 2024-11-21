@@ -43,7 +43,7 @@
                   class="w-12 h-12 object-cover"
                 />
 
-                <span v-else class="text-secondary font-bold text-lg">{{
+                <span v-else class="text-primary font-bold text-lg bg-white px-4 py-2 rounded-lg shadow">{{
                   game.name
                 }}</span>
               </div>
